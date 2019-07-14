@@ -1,28 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-    Page, 
-    PageHeader, 
-    PageSidebar, 
-    PageSection, 
-    PageSectionVariants
+    PageHeader
 } from '@patternfly/react-core';
+import Navigation from './Navigation';
 
-Header = () => {
-
+const Header = props => {
     const logoProps = {
-        href: 'https://patternfly.org',
-        onClick: () => console.log('clicked logo'),
+        href: '/v1/home',
         target: '_blank'
     };
-    const Header = (
-        <PageHeader logo="Logo" logoProps={logoProps} toolbar="Toolbar" avatar=" | Avatar" topNav="Navigation" />
-    );
 
     return (
-        <Page header={Header}>
-            <PageSection variant={PageSectionVariants.dark}>
-                This is a test
-            </PageSection>
-        </Page>
+        <PageHeader logo="Liam McCann" logoProps={logoProps} topNav={<Navigation {...props}/>}/>
     )
 }
+
+export default Header;
