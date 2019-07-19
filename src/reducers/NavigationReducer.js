@@ -1,7 +1,7 @@
 import * as ConstantTypes from '../AppConstants';
 
 const initialState = {
-    activeItem: ConstantTypes.HOME_ITEM,
+    activeItem: ConstantTypes.HOME_URL,
 }
 
 const NavigationReducer = (state=initialState, action) => {
