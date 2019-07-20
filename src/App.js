@@ -9,6 +9,9 @@ function App() {
       <Switch>
         <Route path='/' exact render={() => <Redirect to='/v1/home'/>}/>
         <Route path='/v1/home' component={Home} />
+        <Route path='/v1/about' component={Home} />
+        <Route path='/v1/projects' component={Home} />
+        <Route path='/v1/contact' component={Home} />
       </Switch>
     </Router>
   );

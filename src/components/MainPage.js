@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Grommet, Box, Text, Tab, Tabs } from 'grommet';
-import { Github } from 'grommet-icons';
 import { grommet } from "grommet/themes";
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
+import { setActiveIndex } from '../actions';
+import { connect } from 'react-redux';
+import { MAP_STATE_TO_PROPS, INDEX_TO_URL } from '../AppConstants';
+ 
+function MainPage(props) {
 
-function MainPage() {
-
-    const [isHovered, setHover] = useState(false)
+    function onActive(index) {
+        props.history.push(INDEX_TO_URL[index]);
+        props.dispatch(setActiveIndex(index))
+    }
 
     return (
         <Grommet theme={grommet}>
@@ -13,61 +22,18 @@ function MainPage() {
                 <Text size='48pt'> Liam McCann </Text>
             </Box>
             <Box fill>
-                <Tabs flex>
-                    <Tab title="Home">
-                        <Box
-                            align='center'
-                            overflow="auto"
-                            pad="xlarge"
-                            align="center"
-                        >
-                            <Text align='center' size='xlarge'>
-                                Welcome to my Website
-                            </Text>
-                            <Text align='center' size='medium'>
-                                More to come soon.
-                            </Text>
-                        </Box>
+                <Tabs flex activeIndex={props.activeIndex} onActive={(index) => onActive(index)}>
+                    <Tab title="Home" path='/v1/home'>
+                        <Home/>
                     </Tab>
-                    <Tab title="About">
-                        <Box
-                            align='center'
-                            overflow="auto"
-                            pad="xlarge"
-                            align="center"
-                        >
-                            <Text align='center' size='medium'>
-                                I am a senior Computer Science major and German Minor at
-                                Washington and Lee University.
-                            </Text>
-                        </Box>
+                    <Tab title="About" >
+                        <About/>
                     </Tab>
                     <Tab title="Projects">
-                        <Box
-                            align='center'
-                            overflow="auto"
-                            pad="xlarge"
-                            align="center"
-                        >
-                            <a href='https://github.com/LI0131'>
-                                <Github/>
-                            </a>
-                            <Text align='center' size='large'>
-                                Find me on Github.
-                            </Text>
-                        </Box>
+                        <Projects/>
                     </Tab>
                     <Tab title="Contact">
-                        <Box
-                            align='center'
-                            overflow="auto"
-                            pad="xlarge"
-                            align="center"
-                        >
-                            <Text align='center' size='large'>
-                                mccannw20@mail.wlu.edu
-                            </Text>
-                        </Box>
+                        <Contact/>
                     </Tab>
                 </Tabs>
             </Box>
@@ -75,4 +41,4 @@ function MainPage() {
     )
 }
 
-export default MainPage;
+export default connect(MAP_STATE_TO_PROPS)(MainPage);

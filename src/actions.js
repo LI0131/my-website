@@ -1,5 +1,5 @@
 import * as ActionTypes from './AppConstants';
 
-export function setActiveItem(item) {
-    return {type: ActionTypes.SET_ACTIVE_ITEM, payload: item}
+export function setActiveIndex(index) {
+    return {type: ActionTypes.SET_ACTIVE_INDEX, payload: index}
 };
