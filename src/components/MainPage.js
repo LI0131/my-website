@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Grommet, Box, Text, Tab, Tabs } from 'grommet';
 import { grommet } from "grommet/themes";
 import Home from './Home';
-import About from './About';
+import About from './pages/about';
 import Projects from './Projects';
 import Contact from './Contact';
 import { setActiveIndex } from '../actions';
 import { connect } from 'react-redux';
 import { MAP_STATE_TO_PROPS, INDEX_TO_URL } from '../AppConstants';
-import axios from 'axios';
  
 function MainPage(props) {
-
-
-    
 
     function onActive(index) {
         props.history.push(INDEX_TO_URL[index]);
