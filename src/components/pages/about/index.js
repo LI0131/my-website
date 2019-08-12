@@ -4,14 +4,23 @@ import Education from './Education';
 import Skills from './Skills';
 import Coursework from './Coursework';
 import Experience from './Experience';
+import Header from '../../Header';
+import { MAP_STATE_TO_PROPS } from '../../../AppConstants';
+import { connect } from 'react-redux';
+import { Box } from 'grommet';
 
-export default props => {
+function About(props) {
     return(
-        <StackGrid columnWidth='33%'>
-            <Education gridArea='education'/>
-            <Skills gridArea='skills'/>
-            <Coursework gridArea='coursework'/>
-            <Experience gridArea='experience'/>
-        </StackGrid>
+        <Box>
+            <Header {...props}/>
+            <StackGrid columnWidth='50%'>
+                <Education />
+                <Skills />
+                <Coursework />
+                <Experience />
+            </StackGrid>
+        </Box>
     );
 }
+
+export default connect(MAP_STATE_TO_PROPS)(About);

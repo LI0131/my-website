@@ -14,7 +14,7 @@ const ExpDescription = (props) => {
 
 export default props => {
     return (
-        <Box pad='small' gridArea={props.gridArea}>
+        <Box pad='medium'>
             <Card>
                 <Heading>
                     Experience

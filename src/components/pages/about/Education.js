@@ -5,7 +5,7 @@ import { tertiaryStyle } from './AboutConstants';
 
 export default props => {
     return (
-        <Box pad='small' gridArea={props.gridArea}>
+        <Box pad='medium'>
             <Card>
                 <Heading>
                     Education

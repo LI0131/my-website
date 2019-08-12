@@ -1,5 +1,5 @@
 import * as ActionTypes from './AppConstants';
 
-export function setActiveIndex(index) {
-    return {type: ActionTypes.SET_ACTIVE_INDEX, payload: index}
+export function setActivePage(pathname) {
+    return {type: ActionTypes.SET_ACTIVE_PAGE, payload: pathname}
 };
