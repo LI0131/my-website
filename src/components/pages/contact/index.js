@@ -3,14 +3,18 @@ import Card from '../../HoverableCard';
 import StackGrid from 'react-stack-grid';
 import { Box, Text } from 'grommet';
 import Header from '../../Header';
-import { MAP_STATE_TO_PROPS } from '../../../AppConstants';
+import { MAP_STATE_TO_PROPS, useWindowDimensions, getColumnWidth } from '../../../AppConstants';
 import { connect } from 'react-redux';
 
 function Contact(props) {
+
+    const windowWidth = useWindowDimensions();
+    const columnWidth = getColumnWidth(windowWidth);
+
     return(
         <Box>
             <Header {...props}/>
-            <StackGrid columnWidth='50%'>
+            <StackGrid columnWidth={columnWidth}>
                 <Box pad='medium'>
                     <Card>
                         <Text size='large'>
