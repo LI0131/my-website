@@ -1,10 +1,34 @@
 import { useState, useEffect } from 'react';
 
+/*
+* Define Values
+*/
+
 export const DEFAULT_PATH = '/v1/home';
 export const SET_ACTIVE_PAGE = 'SET_ACTIVE_PAGE';
 export const BLUE_SCHEME = { still: '#2a90bd', hovered: '#34b4eb' }
 export const RED_SCHEME = { still: '#d13b3b', hovered: '#e64040' }
 export const GREEN_SCHEME = { still: '#5eb555', hovered: '#6dd463' }
+
+/*
+* Define Styles
+*/
+
+export const headerStyle = {
+    zIndex: '10',
+    overflow: 'hidden',
+    position: 'fixed',
+    top: 0,
+    width: '100%'
+};
+
+export const pageStyle = {
+    marginTop: '80px'
+}
+
+/*
+* Define Functions
+*/
 
 export function MAP_STATE_TO_PROPS(state) {
     return {

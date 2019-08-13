@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Button } from 'grommet';
 import { setActivePage } from '../actions';
-import { Redirect } from 'react-router';
+import { headerStyle } from '../AppConstants';
  
 export default props => {
 
@@ -12,7 +12,7 @@ export default props => {
 
     return (
         <React.Fragment>
-            <Box pad='small' fill background='dark-2'>
+            <Box pad='small' background='dark-2' style={headerStyle}>
                 <div display='inline'>
                     <Text size='32pt'> Liam McCann </Text>
                     <Button label='home' margin='small' plain onClick={ () => clickHandler(props, 'home') }/>

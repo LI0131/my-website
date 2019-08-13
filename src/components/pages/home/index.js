@@ -3,7 +3,10 @@ import Card from '../../HoverableCard';
 import StackGrid from 'react-stack-grid';
 import { Box, Text } from 'grommet';
 import Header from '../../Header';
-import { MAP_STATE_TO_PROPS, useWindowDimensions, getColumnWidth } from '../../../AppConstants';
+import { 
+    MAP_STATE_TO_PROPS, useWindowDimensions, 
+    getColumnWidth, pageStyle 
+} from '../../../AppConstants';
 import { connect } from 'react-redux';
 
 function Home(props) {
@@ -14,7 +17,7 @@ function Home(props) {
     return(
         <Box>
             <Header {...props}/>
-            <StackGrid columnWidth={columnWidth}>
+            <StackGrid columnWidth={columnWidth} style={pageStyle}>
                 <Box pad='medium'>
                     <Card>
                         <Text align='center' size='xlarge'>
