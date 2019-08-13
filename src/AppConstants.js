@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 /*
 * Define Values
@@ -26,6 +26,17 @@ export const iconStyle = {
     float: 'right',
     marginTop: '15px',
     marginRight: '15px'
+}
+
+export const primaryStyle = {
+    fontWeight: 'bold',
+    display: 'inline',
+    fontStyle: 'normal',
+}
+
+export const tertiaryStyle = {
+    fontWeight: 'lighter',
+    fontStyle: 'italic',
 }
 
 /*
@@ -72,4 +83,10 @@ export function getPageStart(width) {
 export function getColor() {
     const schemes = [BLUE_SCHEME, RED_SCHEME, GREEN_SCHEME];
     return schemes[Math.floor(Math.random() * schemes.length)];
-}
+};
+
+export const Dash = () => {
+    return (
+        <div style={primaryStyle}> {" | "} </div>
+    )
+};

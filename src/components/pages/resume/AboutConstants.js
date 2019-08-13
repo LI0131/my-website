@@ -1,5 +1,3 @@
-import React from 'react';
-
 /*
 * Value Definitions
 */
@@ -23,28 +21,3 @@ export const MATH_COURSES = [
     'Ordinary Differential Equations', 'Calculus on Manifolds',
     'Abstract Algebra', 'Discrete Mathematics'
 ];
-
-/*
-* Style Definitions
-*/
-
-export const primaryStyle = {
-    fontWeight: 'bold',
-    display: 'inline',
-    fontStyle: 'normal',
-}
-
-export const tertiaryStyle = {
-    fontWeight: 'lighter',
-    fontStyle: 'italic',
-}
-
-/*
-* Function Definitions
-*/
-
-export const Dash = () => {
-    return (
-        <div style={primaryStyle}> {" | "} </div>
-    )
-}

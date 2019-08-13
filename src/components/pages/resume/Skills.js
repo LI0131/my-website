@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../HoverableCard';
-import { Dash, SOFTWARE_TOOLS, tertiaryStyle } from './AboutConstants';
+import { SOFTWARE_TOOLS } from './AboutConstants';
+import { tertiaryStyle, Dash } from '../../../AppConstants';
 import { Box, Heading, Paragraph, Markdown } from 'grommet';
 
 const DashedItem = (props) => {

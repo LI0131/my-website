@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading, Paragraph, Markdown } from 'grommet';
-import { tertiaryStyle } from './AboutConstants';
+import { tertiaryStyle } from '../../../AppConstants';
 
 export default props => {
     return (
