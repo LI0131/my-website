@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../../HoverableCard';
-import { SOFTWARE_TOOLS } from './AboutConstants';
+import { SOFTWARE_TOOLS } from './ResumeConstants';
 import { tertiaryStyle, Dash } from '../../../AppConstants';
 import { Box, Heading, Paragraph, Markdown } from 'grommet';
 

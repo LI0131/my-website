@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dash, tertiaryStyle, primaryStyle } from '../AppConstants';
+import { Dash, tertiaryStyle, primaryStyle } from '../../AppConstants';
 import { Button, Layer, Box } from 'grommet';
 
 function DescriptionButton(props) {
@@ -27,6 +27,7 @@ export default props => {
                     onEsc={() => setVisibility(false)}
                     onClickOutside={() => setVisibility(false)}
                 >
+                    {props.children}
                 </Layer>
             )}
         </Box>

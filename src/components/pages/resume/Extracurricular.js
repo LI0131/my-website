@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
-import DescriptionLayer from '../../DescriptionLayer';
+import Description from '../../description';
 
 export default props => {
     return (
@@ -10,18 +10,20 @@ export default props => {
                 <Heading>
                     Extracurricular
                 </Heading>
-                <DescriptionLayer
+                <Description
                     title='Mock Convention'
                     position='Meta Data Manager'
                     startdate='February 2018'
                     enddate='present'
                     place='Washington and Lee University'
+                    items={[]}
                 />
-                <DescriptionLayer
+                <Description
                     title='Robotics Club'
                     startdate='October 2017'
                     enddate='present'
                     place='Washington and Lee University'
+                    items={[]}
                 />
             </Card>
         </Box>
