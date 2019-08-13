@@ -6,7 +6,7 @@ import { Github } from 'grommet-icons'
 import Header from '../../Header';
 import {
     MAP_STATE_TO_PROPS, useWindowDimensions, 
-    getColumnWidth, pageStyle 
+    getColumnWidth, getPageStart
 } from '../../../AppConstants';
 import { connect } from 'react-redux';
 
@@ -14,11 +14,12 @@ function Projects(props) {
 
     const windowWidth = useWindowDimensions();
     const columnWidth = getColumnWidth(windowWidth);
+    const pageStart = getPageStart(windowWidth);
 
     return(
         <Box>
             <Header {...props}/>
-            <StackGrid columnWidth={columnWidth} style={pageStyle}>
+            <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Box pad='medium'>
                     <Card>
                         <a href='https://github.com/LI0131'>

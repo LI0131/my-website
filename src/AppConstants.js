@@ -22,10 +22,6 @@ export const headerStyle = {
     width: '100%'
 };
 
-export const pageStyle = {
-    marginTop: '80px'
-}
-
 /*
 * Define Functions
 */
@@ -61,6 +57,10 @@ export function getColumnWidth(width) {
         width < 960 ? '50%' :
         '33%'
     );
+};
+
+export function getPageStart(width) {
+    return width > 590 ? '9vh' : '15vh'
 };
 
 export function getColor() {

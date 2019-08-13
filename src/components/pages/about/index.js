@@ -7,7 +7,7 @@ import Experience from './Experience';
 import Header from '../../Header';
 import { 
     MAP_STATE_TO_PROPS, useWindowDimensions,
-    getColumnWidth, pageStyle 
+    getColumnWidth, getPageStart 
 } from '../../../AppConstants';
 import { connect } from 'react-redux';
 import { Box } from 'grommet';
@@ -16,11 +16,12 @@ function About(props) {
 
     const windowWidth = useWindowDimensions();
     const columnWidth = getColumnWidth(windowWidth);
+    const pageStart = getPageStart(windowWidth);
 
     return(
         <Box>
             <Header {...props}/>
-            <StackGrid columnWidth={columnWidth} style={pageStyle}>
+            <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Education />
                 <Skills />
                 <Coursework />
