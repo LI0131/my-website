@@ -11,6 +11,7 @@ import {
 } from '../../../AppConstants';
 import { connect } from 'react-redux';
 import { Box } from 'grommet';
+import Extracurricular from './Extracurricular';
 
 function About(props) {
 
@@ -23,9 +24,10 @@ function About(props) {
             <Header {...props}/>
             <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Education />
+                <Experience />
                 <Skills />
                 <Coursework />
-                <Experience />
+                <Extracurricular />
             </StackGrid>
         </Box>
     );

@@ -10,7 +10,7 @@ export default function HoverableCard(props) {
     return (
         <React.Fragment>
             <Box
-            pad="large"
+            pad="medium"
             align="center"
             background={ isHovered ? 
                 { color: colors.hovered, opacity: "strong" } :

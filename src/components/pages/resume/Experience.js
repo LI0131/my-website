@@ -33,6 +33,13 @@ export default props => {
                     enddate='September 2018'
                     position='Summer Research Scholar'
                 />
+                <ExpDescription
+                    title='Allergy Partners, LLC.'
+                    place='Asheville, NC'
+                    startdate='May 2017'
+                    enddate='August 2017'
+                    position='Software Development Analyst'
+                />
             </Card>
         </Box>
     );
