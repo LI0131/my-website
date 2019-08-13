@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Box } from 'grommet';
+import { getColor } from '../AppConstants';
 
 export default function HoverableCard(props) {
 
     const [isHovered, setHover] = useState(false);
+    const [colors, setColor] = useState(getColor());
 
     return (
         <React.Fragment>
@@ -11,8 +13,8 @@ export default function HoverableCard(props) {
             pad="large"
             align="center"
             background={ isHovered ? 
-                { color: "dark-1", opacity: "strong" } :
-                { color: "dark-3" }
+                { color: colors.hovered, opacity: "strong" } :
+                { color: colors.still }
             }
             onMouseEnter={ () => setHover(true) }
             onMouseLeave={ () => setHover(false) }
