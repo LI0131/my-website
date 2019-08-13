@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Text, Button } from 'grommet';
 import { setActivePage } from '../actions';
-import { headerStyle } from '../AppConstants';
+import { headerStyle, iconStyle } from '../AppConstants';
+import { Github, Linkedin, Mail } from 'grommet-icons';
+import ContactButton from './ContactButton';
  
 export default props => {
 
@@ -14,11 +16,21 @@ export default props => {
         <React.Fragment>
             <Box pad='small' background='dark-2' style={headerStyle}>
                 <div display='inline'>
-                    <Text size='32pt'> Liam McCann </Text>
-                    <Button label='home' margin='small' plain onClick={ () => clickHandler(props, 'home') }/>
-                    <Button label='about' margin='small' plain onClick={ () => clickHandler(props, 'about') }/>
-                    <Button label='projects' margin='small' plain onClick={ () => clickHandler(props, 'projects') }/>
-                    <Button label='contact' margin='small' plain onClick={ () => clickHandler(props, 'contact') }/>
+                    <div style={{float: 'left'}}>
+                        <Text size='32pt'> Liam McCann </Text>
+                        <Button label='home' margin='small' plain onClick={ () => clickHandler(props, 'home') }/>
+                        <Button label='resume' margin='small' plain onClick={ () => clickHandler(props, 'about') }/>
+                        <Button label='projects' margin='small' plain onClick={ () => clickHandler(props, 'projects') }/>
+                    </div>
+                    <ContactButton to='https://github.com/LI0131'>
+                        <Github/>
+                    </ContactButton>
+                    <ContactButton to='https://www.linkedin.com/in/william-mccann-a83558138/'>
+                        <Linkedin/>
+                    </ContactButton>
+                    <ContactButton to='mailto:mccannw20@mail.wlu.edu'>
+                        <Mail/>
+                    </ContactButton>
                 </div>
             </Box>
         </React.Fragment>

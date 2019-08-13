@@ -22,6 +22,12 @@ export const headerStyle = {
     width: '100%'
 };
 
+export const iconStyle = {
+    float: 'right',
+    marginTop: '15px',
+    marginRight: '15px'
+}
+
 /*
 * Define Functions
 */
