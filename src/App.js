@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route path='/' exact render={() => <Redirect to='/v1/home'/>}/>
           <Route path='/v1/home' component={Home} />
-          <Route path='/v1/about' component={Resume} />
+          <Route path='/v1/resume' component={Resume} />
           <Route path='/v1/projects' component={Projects} />
         </Switch>
       </Router>

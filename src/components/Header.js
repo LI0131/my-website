@@ -19,7 +19,7 @@ export default props => {
                     <div style={{float: 'left'}}>
                         <Text size='32pt'> Liam McCann </Text>
                         <Button label='home' margin='small' plain onClick={ () => clickHandler(props, 'home') }/>
-                        <Button label='resume' margin='small' plain onClick={ () => clickHandler(props, 'about') }/>
+                        <Button label='resume' margin='small' plain onClick={ () => clickHandler(props, 'resume') }/>
                         <Button label='projects' margin='small' plain onClick={ () => clickHandler(props, 'projects') }/>
                     </div>
                     <ContactButton to='https://github.com/LI0131'>
