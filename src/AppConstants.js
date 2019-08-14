@@ -81,7 +81,7 @@ export function getPageStart(width) {
 };
 
 export function getColor() {
-    const schemes = [BLUE_SCHEME, RED_SCHEME, GREEN_SCHEME];
+    const schemes = [BLUE_SCHEME];
     return schemes[Math.floor(Math.random() * schemes.length)];
 };
 
