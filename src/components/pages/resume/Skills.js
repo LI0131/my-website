@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../HoverableCard';
 import { SOFTWARE_TOOLS } from './ResumeConstants';
 import { tertiaryStyle, Dash } from '../../../AppConstants';
-import { Box, Heading, Paragraph, Markdown } from 'grommet';
+import { Box, Heading, Markdown } from 'grommet';
 
 const DashedItem = (props) => {
     return (
@@ -18,11 +18,11 @@ const DashedList = (props) => {
     )
 }
 
-const P = (props) => {
+const Div = (props) => {
     return(
-        <p style={{display:'inline'}}>
+        <div style={{display:'inline'}}>
             {props.children}
-        </p>
+        </div>
     )
 }
 
@@ -36,28 +36,28 @@ export default props => {
                 <Markdown>
                     **Programming Languages**
                 </Markdown>
-                <P>
-                    <P> {'Proficient '} </P> 
-                    <P> ... Java <Dash/> Python <Dash/> Javascript (JSX ES6) <Dash/> SQL </P>
-                </P>
-                <P>
-                    <P> {'Basic '} </P> 
-                    <P> ... Bash <Dash/> C <Dash/> Swift <Dash/> Haskell <Dash/> Erlang <Dash/> PHP </P>
-                </P>
-                <P>
-                    <P> {'Operating Systems '}</P>
-                    <P> ... macOS <Dash/> Windows <Dash/> RHEL <Dash/> Fedora </P>
-                </P>
+                <Div>
+                    <Div> {'Proficient '} </Div> 
+                    <Div> ... Java <Dash/> Python <Dash/> Javascript (JSX ES6) <Dash/> SQL </Div>
+                </Div>
+                <Div>
+                    <Div> {'Basic '} </Div> 
+                    <Div> ... Bash <Dash/> C <Dash/> Swift <Dash/> Haskell <Dash/> Erlang <Dash/> PHP </Div>
+                </Div>
+                <Div>
+                    <Div> {'Operating Systems '}</Div>
+                    <Div> ... macOS <Dash/> Windows <Dash/> RHEL <Dash/> Fedora </Div>
+                </Div>
                 <Markdown>
                     **Software Tools**
                 </Markdown>
-                <Paragraph style={tertiaryStyle}>
+                <div style={tertiaryStyle}>
                     <DashedList list={SOFTWARE_TOOLS}/>
-                </Paragraph>
+                </div>
                 <Markdown>
                     **Spoken Language**
                 </Markdown>
-                <p> German (Intermediate) </p>
+                <Div> German (Intermediate) </Div>
             </Card>
         </Box>
     );

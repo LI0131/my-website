@@ -69,9 +69,27 @@ export function useWindowDimensions() {
     return windowWidth;
 };
 
+function getLocationHash(history) {
+    return history.location.hasOwnProperty('hash') ? history.location.hash : ''
+}
+
+export function useLocationHash(history) {
+    const [hash, setHash] = useState(getLocationHash(history));
+
+    useEffect(() => {
+        if (history.location.hasOwnProperty('hash')) {
+            if (history.location.hash !== hash && hash) {
+                setHash(history.location.hash);
+            }
+        } else { setHash(false); }
+    }, [history.location, hash]);
+
+    return hash;
+};
+
 export function getColumnWidth(width) {
     return width < 480 ? '100%' : (
-        width < 960 ? '50%' :
+        width < 1175 ? '50%' :
         '33%'
     );
 };
