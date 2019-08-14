@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
 import Description from '../../description';
+import { MOCK_CON_INFO, ROBOTICS_INFO } from './ResumeConstants';
 
 export default props => {
     return (
@@ -16,14 +17,14 @@ export default props => {
                     startdate='February 2018'
                     enddate='present'
                     place='Washington and Lee University'
-                    items={[]}
+                    items={ MOCK_CON_INFO }
                 />
                 <Description
                     title='Robotics Club'
                     startdate='October 2017'
                     enddate='present'
                     place='Washington and Lee University'
-                    items={[]}
+                    items={ ROBOTICS_INFO }
                 />
             </Card>
         </Box>
