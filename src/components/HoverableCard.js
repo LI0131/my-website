@@ -5,7 +5,7 @@ import { getColor } from '../AppConstants';
 export default function HoverableCard(props) {
 
     const [isHovered, setHover] = useState(false);
-    const [colors, setColor] = useState(getColor());
+    const [colors] = useState(getColor());
 
     return (
         <React.Fragment>
