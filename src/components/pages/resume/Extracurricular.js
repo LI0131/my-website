@@ -17,6 +17,8 @@ export default props => {
                     enddate='present'
                     place='Washington and Lee University'
                     items={[]}
+                    visible={ props.hash === '#MockConvention' ? true : false }
+                    {...props}
                 />
                 <Description
                     title='Robotics Club'
@@ -24,6 +26,8 @@ export default props => {
                     enddate='present'
                     place='Washington and Lee University'
                     items={[]}
+                    visible={ props.hash === '#RoboticsClub' ? true : false }
+                    {...props}
                 />
             </Card>
         </Box>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Button } from 'grommet';
 import { setActivePage } from '../actions';
-import { headerStyle, iconStyle } from '../AppConstants';
+import { headerStyle } from '../AppConstants';
 import { Github, Linkedin, Mail } from 'grommet-icons';
 import ContactButton from './ContactButton';
  

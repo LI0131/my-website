@@ -7,7 +7,7 @@ import Experience from './Experience';
 import Header from '../../Header';
 import { 
     MAP_STATE_TO_PROPS, useWindowDimensions,
-    getColumnWidth, getPageStart 
+    getColumnWidth, getPageStart, useLocationHash
 } from '../../../AppConstants';
 import { connect } from 'react-redux';
 import { Box } from 'grommet';
@@ -16,6 +16,7 @@ import Extracurricular from './Extracurricular';
 function About(props) {
 
     const windowWidth = useWindowDimensions();
+    const hash = useLocationHash(props.history);
     const columnWidth = getColumnWidth(windowWidth);
     const pageStart = getPageStart(windowWidth);
 
@@ -24,10 +25,10 @@ function About(props) {
             <Header {...props}/>
             <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Education />
-                <Experience />
+                <Experience {...props} hash={hash}/>
                 <Skills />
                 <Coursework />
-                <Extracurricular />
+                <Extracurricular {...props} hash={hash}/>
             </StackGrid>
         </Box>
     );
