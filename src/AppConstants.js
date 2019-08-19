@@ -77,7 +77,7 @@ export function getColumnWidth(width) {
 };
 
 export function getPageStart(width) {
-    return width > 590 ? '9vh' : '15vh'
+    return width > 590 ? window.innerHeight * 0.105 : window.innerHeight * 0.15
 };
 
 export function getColor() {

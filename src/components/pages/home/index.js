@@ -1,35 +1,24 @@
 import React from 'react';
-import Card from '../../HoverableCard';
-import StackGrid from 'react-stack-grid';
-import { Box, Text } from 'grommet';
+import { Box } from 'grommet';
 import Header from '../../Header';
 import { 
-    MAP_STATE_TO_PROPS, useWindowDimensions, 
-    getColumnWidth, getPageStart
+    MAP_STATE_TO_PROPS, useWindowDimensions, getPageStart
 } from '../../../AppConstants';
+import { getSectionSize } from './HomeConstants';
 import { connect } from 'react-redux';
+import Welcome from './Welcome';
+import ncBg from '../../../static/images/nc-bg.jpg'
 
 function Home(props) {
 
     const windowWidth = useWindowDimensions();
-    const columnWidth = getColumnWidth(windowWidth);
     const pageStart = getPageStart(windowWidth);
+    const sectionStyle = getSectionSize(pageStart)
     
     return(
         <Box>
             <Header {...props}/>
-            <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
-                <Box pad='medium'>
-                    <Card>
-                        <Text align='center' size='xlarge'>
-                            Welcome to my Website
-                        </Text>
-                        <Text align='center' size='medium'>
-                            More to come soon.
-                        </Text>
-                    </Card>
-                </Box>
-            </StackGrid>
+            <Welcome background={ncBg} sectionStyle={sectionStyle}/>
         </Box>
     );
 }
