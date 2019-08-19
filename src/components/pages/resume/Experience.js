@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
 import Description from '../../description';
+import { SUMMER_RESEARCH_INFO, ALLERGY_PARTNERS_INFO } from './ResumeConstants';
 
 export default props => {
     return (
@@ -24,7 +25,7 @@ export default props => {
                     startdate='May 2018'
                     enddate='September 2018'
                     position='Summer Research Scholar'
-                    items={[]}
+                    items={ SUMMER_RESEARCH_INFO }
                 />
                 <Description
                     title='Allergy Partners, LLC.'
@@ -32,7 +33,7 @@ export default props => {
                     startdate='May 2017'
                     enddate='August 2017'
                     position='Software Development Analyst'
-                    items={[]}
+                    items={ ALLERGY_PARTNERS_INFO }
                 />
             </Card>
         </Box>

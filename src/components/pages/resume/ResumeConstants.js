@@ -43,3 +43,18 @@ export const SUMMER_RESEARCH_INFO = [
     'Elevated algorithm productivity by increasing the number of genetic operators',
     'Co-authored a paper detailing our work for presentation at GECCO \'19'
 ];
+
+export const MOCK_CON_INFO = [
+    'Plan and manage the operations of the Meta Data Team',
+    'Create a Postgresql relational database queryable by candidate and location',
+    'Write Selenium webscrapers to collect polling data from various pollsters to be updated within the database in real time',
+    'Format candidate profiles by candidate',
+    'Collect and import demographic data for all US counties',
+    'Write technical application questions and conduct interviews for new hires'
+];
+
+export const ROBOTICS_INFO = [
+    'Wrote C++ programs to automate robot movements',
+    'Utilized GitHub web-hosting to communicate with the robot over the internet',
+    'Worked with the Mechanical and Electrical Teams to optimize robot design'
+];
