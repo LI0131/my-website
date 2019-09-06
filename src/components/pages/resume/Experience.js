@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
 import Description from '../../description';
-import { SUMMER_RESEARCH_INFO, ALLERGY_PARTNERS_INFO } from './ResumeConstants';
+import { SUMMER_RESEARCH_INFO, ALLERGY_PARTNERS_INFO, RED_HAT_INFO } from './ResumeConstants';
 
 export default props => {
     return (
@@ -17,7 +17,7 @@ export default props => {
                     startdate='May 2019'
                     enddate='present'
                     position='Software Engineering Intern'
-                    items={[]}
+                    items={ RED_HAT_INFO }
                 />
                 <Description
                     title='Web App Test Case Generation'

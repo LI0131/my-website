@@ -3,9 +3,9 @@
 */
 
 export const SOFTWARE_TOOLS = [
-    'Selenium', 'Heroku', 'PostgreSQL', 'React.js', 'Redux',
-    'Node.js', 'Git', 'Apache Kafka', 'OpenShift', 'Docker',
-    'Kubernetes', 'Swagger', 'SQLachlechmy', 'Asyncio', 'Flask',
+    'Selenium', 'Heroku', 'cPanel', 'MySQL', 'PostgreSQL', 'React.js', 'Redux',
+    'Node.js', 'Angular.js', 'Git', 'Apache Kafka', 'OpenShift', 'Docker',
+    'Kubernetes', 'Swagger', 'SQLachlechmy', 'Asyncio', 'Flask', 'Pytest',
     'MS Excel', 'MS Visio'
 ];
 
@@ -22,39 +22,43 @@ export const MATH_COURSES = [
     'Abstract Algebra', 'Discrete Mathematics'
 ];
 
+export const RED_HAT_INFO = [
+    'Created Swagger spec API using Connexion app for Payload Tracker Service',
+    'Researched Apache Kafka and Kafka Broker Lag for future work on autoscaling',
+    'Implemented RESTapi endpoint for monitoring system health using statistics',
+    'Created React application as frontend for the Payload Tracker service using ‘Redux-First’ state management',
+    'Utilized Redux to generate URLs via a custom middleware of my own design',
+    'Created an async log scraping tool in Python to incorporate data from a legacy data stream into the Payload Tracker service',
+    'Implemented Web Sockets on both the frontend and backend of the Payload Tracker service',
+    'Generated auto-renewed auth tickets using MIT’s Kerberos Auth tool, which will be later incorporate using an SSSD container'
+];
+
 export const ALLERGY_PARTNERS_INFO = [
-    'Implemented the Luhn Algorithm in Java for check digit generation',
-    'Introduced a QR code alternative to a physical card with URXmobile',
-    'Formulated dataflow designs for two new programs communicated between \
-     the core EMR, patient management software, and mobile health application',
+    'Assisted URXmobile in creating a QR Code alternative to patient ID-cards within their mobile application',
     'Researched usage of paper medical records and retention across 51 practices',
-    'Provided cost analysis of an electronic medical record retention substitute, FileHold',
-    'Proposed movement toward electronic retention of all records to the President \
-     and Vice-President, who approved the $40,000 investment'
+    'Proposed movement toward electronic retention of all records to the President and Vice-President, who approved the \$40,000 investment'
 ];
 
 export const SUMMER_RESEARCH_INFO = [
-    'Awarded funding by the Summer Research Scholars Program to conduct \
-     research with Dr. Sara Sprenkle and Dr. Thomas Helmuth',
+    'Awarded funding by the Summer Research Scholars Program to conduct research with Dr. Sara Sprenkle and Dr. Thomas Helmuth',
     'Implemented the Genetic Algorithm in Python and Bash',
     'Refactored existing code to utilize a standard API',
     'Generated graphs using Matplotlib for trend analysis and data visualization',
     'Refactored algorithm design based on generational trends',
-    'Elevated algorithm productivity by increasing the number of genetic operators',
-    'Co-authored a paper detailing our work for presentation at GECCO \'19'
+    'Elevated algorithm productivity by increasing the number of genetic operators'
 ];
 
 export const MOCK_CON_INFO = [
-    'Plan and manage the operations of the Meta Data Team',
-    'Create a Postgresql relational database queryable by candidate and location',
-    'Write Selenium webscrapers to collect polling data from various pollsters to be updated within the database in real time',
-    'Format candidate profiles by candidate',
-    'Collect and import demographic data for all US counties',
+    'Manage and oversee the operations of the Meta Data Team',
+    'Outline and Implement MySQL database for candidate, polling, and demographic data',
+    'Integrate Angular Frontend with cPanel and Heroku using Express',
+    'Create production and beta environments using Heroku and cPanel',
+    'Use Python Flask application to automate data collection from pollsters',
+    'Write RESTapi for database connections in PHP',
     'Write technical application questions and conduct interviews for new hires'
 ];
 
 export const ROBOTICS_INFO = [
     'Wrote C++ programs to automate robot movements',
     'Utilized GitHub web-hosting to communicate with the robot over the internet',
-    'Worked with the Mechanical and Electrical Teams to optimize robot design'
 ];
