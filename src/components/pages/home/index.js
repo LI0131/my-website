@@ -18,7 +18,7 @@ function Home(props) {
     return(
         <Box>
             <Header {...props}/>
-            <Welcome background={ncBg} sectionStyle={sectionStyle}/>
+            <Welcome background={ncBg} sectionStyle={sectionStyle} {...props}/>
         </Box>
     );
 }

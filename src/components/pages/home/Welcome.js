@@ -22,6 +22,7 @@ export default props => {
                         label='About Me'
                         margin='small'
                         color='dark-2'
+                        onClick={ () => props.history.push('/v1/resume') }
                     />
                 </Box>
             </Box>
