@@ -26,7 +26,7 @@ const P = (props) => {
     )
 }
 
-export default props => {
+const Skills = () => {
     return (
         <Box pad='medium'>
             <Card>
@@ -62,3 +62,5 @@ export default props => {
         </Box>
     );
 };
+
+export default Skills;

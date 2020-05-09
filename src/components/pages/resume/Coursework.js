@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from '../../HoverableCard';
-import List from '../../list';
+import { List } from '../../list';
 import { Box, Heading, Markdown } from 'grommet';
 import { COMPUTER_SCI_COURSES, MATH_COURSES } from './ResumeConstants';
 
-export default props => {
+const Coursework = () => {
     return (
         <Box pad='medium'>
             <Card>
@@ -27,3 +27,5 @@ export default props => {
         </Box>
     );
 };
+
+export default Coursework;

@@ -1,29 +1,36 @@
 import React, { useState } from 'react';
 import { Box } from 'grommet';
 import { getColor } from '../AppConstants';
+import PropTypes from 'prop-types';
 
-export default function HoverableCard(props) {
+const HoverableCard = ({ children }) => {
 
     const [isHovered, setHover] = useState(false);
-    const [colors, setColor] = useState(getColor());
+    const colors = getColor();
 
     return (
         <React.Fragment>
             <Box
-            pad="medium"
-            align="center"
-            background={ isHovered ? 
-                { color: colors.hovered, opacity: "strong" } :
-                { color: colors.still }
-            }
-            onMouseEnter={ () => setHover(true) }
-            onMouseLeave={ () => setHover(false) }
-            round
-            style={{color: '#ffffff'}}
-            gap="small"
+                pad="medium"
+                align="center"
+                background={ isHovered ? 
+                    { color: colors.hovered, opacity: "strong" } :
+                    { color: colors.still }
+                }
+                onMouseEnter={ () => setHover(true) }
+                onMouseLeave={ () => setHover(false) }
+                round
+                style={{color: '#ffffff'}}
+                gap="small"
             >
-                {props.children}
+                { children }
             </Box>
         </React.Fragment>
-    )
-}
+    );
+};
+
+HoverableCard.propTypes = {
+    children: PropTypes.node
+};
+
+export default HoverableCard;

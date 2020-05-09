@@ -3,7 +3,7 @@ import Card from '../../HoverableCard';
 import { Box, Heading, Paragraph, Markdown } from 'grommet';
 import { tertiaryStyle } from '../../../AppConstants';
 
-export default props => {
+const Education = () => {
     return (
         <Box pad='medium'>
             <Card>
@@ -17,9 +17,11 @@ export default props => {
                     BS in Computer Science with a minor in German
                 </Paragraph>
                 <Markdown style={tertiaryStyle}>
-                    _GPA: 3.61/4.0 | Major GPA: 3.81/4.0_
+                    _GPA: 3.67/4.0 | Major GPA: 3.81/4.0_
                 </Markdown>
             </Card>
         </Box>
     );
 };
+
+export default Education;

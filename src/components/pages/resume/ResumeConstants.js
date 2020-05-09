@@ -12,8 +12,8 @@ export const SOFTWARE_TOOLS = [
 export const COMPUTER_SCI_COURSES = [
     'Programming in Python', 'Computer Organization in C',
     'Software Design in Java', 'Algorithm Design',
-    'Database Management', 'Artificial Intelligence (Fall 2019)',
-    'Theory of Computation (Fall 2019)'
+    'Database Management', 'Artificial Intelligence',
+    'Theory of Computation', 'Neural Networks'
 ];
 
 export const MATH_COURSES = [
@@ -30,7 +30,10 @@ export const RED_HAT_INFO = [
     'Utilized Redux to generate URLs via a custom middleware of my own design',
     'Created an async log scraping tool in Python to incorporate data from a legacy data stream into the Payload Tracker service',
     'Implemented Web Sockets on both the frontend and backend of the Payload Tracker service',
-    'Generated auto-renewed auth tickets using MIT’s Kerberos Auth tool, which will be later incorporate using an SSSD container'
+    'Generated auto-renewed auth tickets using MIT’s Kerberos Auth tool, which will be later incorporate using an SSSD container',
+    'Worked within Insights application frontend to develop pages and fix UI bugs',
+    'Created an executive reporting system using the React-PDF open-source library and custom components, driven by async processing of REST API calls',
+    'Contributed components to RedHat frontend components library, used in all cloud.redhat.com frontend applications'
 ];
 
 export const ALLERGY_PARTNERS_INFO = [
@@ -44,8 +47,15 @@ export const SUMMER_RESEARCH_INFO = [
     'Implemented the Genetic Algorithm in Python and Bash',
     'Refactored existing code to utilize a standard API',
     'Generated graphs using Matplotlib for trend analysis and data visualization',
-    'Refactored algorithm design based on generational trends',
+    'Refactored algorithm design based on generational trend analysis',
     'Elevated algorithm productivity by increasing the number of genetic operators'
+];
+
+export const INDEPENDENT_STUDY_INFO = [
+    'Deployed Tomcat applications using docker and docker-compose',
+    'Implemented development scripts to automate construction and tear-down of applications',
+    'Integrated a java Replay Tool to forward HTTP user sessions to Subject applications via docker-compose.override, which utilized Apache Clover to record coverage data',
+    'Created custom Tomcat listeners to conduct data transfer between Tomcat’s JDBC endpoint and Elastic Search nodes'
 ];
 
 export const MOCK_CON_INFO = [

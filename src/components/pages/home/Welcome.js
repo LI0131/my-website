@@ -1,12 +1,19 @@
 import React from 'react';
 import { Box, Text, Button } from 'grommet';
 import { sectionStyle } from './HomeConstants';
+import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as AppActions from '../../../actions';
+import PropTypes from 'prop-types';
 
-export default props => {
+const Welcome = ({ setActivePage, background }) => {
+
+    const history = useHistory();
+
     return(
         <Box style={{ height: sectionStyle }}>
             <Box pad='medium' style={{...sectionStyle, ...{
-                background: `url(${props.background})`,
+                background: `url(${background})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
@@ -22,10 +29,21 @@ export default props => {
                         label='About Me'
                         margin='small'
                         color='dark-2'
-                        onClick={ () => props.history.push('/v1/resume') }
+                        onClick={ () => setActivePage('/v1/resume') && history.push('/v1/resume') }
                     />
                 </Box>
             </Box>
         </Box>
     )
-}
+};
+
+Welcome.propTypes = {
+    background: PropTypes.any,
+    setActivePage: PropTypes.func
+};
+
+const mapDispatchToProps = dispatch => ({
+    setActivePage: (url) => dispatch(AppActions.setActivePage(url))
+});
+
+export default connect(null, mapDispatchToProps)(Welcome);

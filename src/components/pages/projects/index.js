@@ -4,13 +4,9 @@ import StackGrid from 'react-stack-grid';
 import { Box, Text } from 'grommet'
 import { Github } from 'grommet-icons'
 import Header from '../../Header';
-import {
-    MAP_STATE_TO_PROPS, useWindowDimensions, 
-    getColumnWidth, getPageStart
-} from '../../../AppConstants';
-import { connect } from 'react-redux';
+import { useWindowDimensions, getColumnWidth, getPageStart } from '../../../AppConstants';
 
-function Projects(props) {
+const Projects = () => {
 
     const windowWidth = useWindowDimensions();
     const columnWidth = getColumnWidth(windowWidth);
@@ -18,7 +14,7 @@ function Projects(props) {
 
     return(
         <Box>
-            <Header {...props}/>
+            <Header/>
             <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Box pad='medium'>
                     <Card>
@@ -35,4 +31,4 @@ function Projects(props) {
     );
 }
 
-export default connect(MAP_STATE_TO_PROPS)(Projects);
+export default Projects;

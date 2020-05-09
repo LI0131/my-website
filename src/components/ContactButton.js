@@ -1,10 +1,18 @@
 import React from 'react';
 import { iconStyle } from '../AppConstants';
+import PropTypes from 'prop-types';
 
-export default props => {
+const ContactButton = ({ children, to }) => {
     return (
-        <a href={props.to} style={iconStyle}>
-            {props.children}
+        <a href={ to } style={ iconStyle }>
+            { children }
         </a>
     );
 };
+
+ContactButton.propTypes = {
+    children: PropTypes.node.isRequired,
+    to: PropTypes.string.isRequired
+};
+
+export default ContactButton;

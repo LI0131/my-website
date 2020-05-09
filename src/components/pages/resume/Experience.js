@@ -1,10 +1,12 @@
 import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
-import Description from '../../description';
-import { SUMMER_RESEARCH_INFO, ALLERGY_PARTNERS_INFO, RED_HAT_INFO } from './ResumeConstants';
+import { Description } from '../../description';
+import {
+    SUMMER_RESEARCH_INFO, ALLERGY_PARTNERS_INFO, RED_HAT_INFO, INDEPENDENT_STUDY_INFO
+} from './ResumeConstants';
 
-export default props => {
+const Experience = () => {
     return (
         <Box pad='medium'>
             <Card>
@@ -18,6 +20,14 @@ export default props => {
                     enddate='present'
                     position='Software Engineering Intern'
                     items={ RED_HAT_INFO }
+                />
+                <Description
+                    title='Independent Study'
+                    place='Washington and Lee University'
+                    startdate='January 2020'
+                    enddate='April 2020'
+                    position='Research Assistant'
+                    items={ INDEPENDENT_STUDY_INFO }
                 />
                 <Description
                     title='Web App Test Case Generation'
@@ -39,3 +49,5 @@ export default props => {
         </Box>
     );
 };
+
+export default Experience;

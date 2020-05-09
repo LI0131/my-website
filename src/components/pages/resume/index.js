@@ -5,15 +5,11 @@ import Skills from './Skills';
 import Coursework from './Coursework';
 import Experience from './Experience';
 import Header from '../../Header';
-import { 
-    MAP_STATE_TO_PROPS, useWindowDimensions,
-    getColumnWidth, getPageStart 
-} from '../../../AppConstants';
-import { connect } from 'react-redux';
+import { useWindowDimensions, getColumnWidth, getPageStart } from '../../../AppConstants';
 import { Box } from 'grommet';
 import Extracurricular from './Extracurricular';
 
-function About(props) {
+const About = () => {
 
     const windowWidth = useWindowDimensions();
     const columnWidth = getColumnWidth(windowWidth);
@@ -21,7 +17,7 @@ function About(props) {
 
     return(
         <Box>
-            <Header {...props}/>
+            <Header/>
             <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
                 <Education />
                 <Experience />
@@ -33,4 +29,4 @@ function About(props) {
     );
 }
 
-export default connect(MAP_STATE_TO_PROPS)(About);
+export default About;

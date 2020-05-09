@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from '../../HoverableCard';
 import { Box, Heading } from 'grommet';
-import Description from '../../description';
+import { Description } from '../../description';
 import { MOCK_CON_INFO, ROBOTICS_INFO } from './ResumeConstants';
 
-export default props => {
+const Extracurricular = () => {
     return (
         <Box pad='medium'>
             <Card>
@@ -30,3 +30,5 @@ export default props => {
         </Box>
     );
 };
+
+export default Extracurricular;
