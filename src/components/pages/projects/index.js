@@ -1,31 +1,39 @@
-import React from 'react';
-import Card from '../../HoverableCard';
+import React, { useState, useEffect } from 'react';
 import StackGrid from 'react-stack-grid';
-import { Box, Text } from 'grommet'
-import { Github } from 'grommet-icons'
+import { Box } from 'grommet'
 import Header from '../../Header';
 import { useWindowDimensions, getColumnWidth, getPageStart } from '../../../AppConstants';
+import axios from 'axios';
+import Project from './Project';
 
 const Projects = () => {
 
     const windowWidth = useWindowDimensions();
     const columnWidth = getColumnWidth(windowWidth);
     const pageStart = getPageStart(windowWidth);
+    const [gitInfo, setGitInfo] = useState(null);
+
+    const parseGitInfo = (json) => {
+        const allowed = ['description', 'html_url', 'name', 'forks', 'stargazers_count', 'watchers'];
+        return json.map(item => Object.entries(item).filter(([key, val]) =>
+            allowed.includes(key)).reduce((obj, [key, val]) => {
+                obj[key] = val;
+                return obj;
+            }, {}));
+    };
+
+    useEffect(() => {
+        axios.get('https://api.github.com/users/LI0131/repos')
+            .then((res) => setGitInfo(parseGitInfo(res.data)));
+    }, [setGitInfo]);
 
     return(
         <Box>
             <Header/>
             <StackGrid columnWidth={columnWidth} style={{ marginTop: pageStart }}>
-                <Box pad='medium'>
-                    <Card>
-                        <a href='https://github.com/LI0131'>
-                            <Github/>
-                        </a>
-                        <Text size='large'>
-                            Find me on Github.
-                        </Text>
-                    </Card>
-                </Box>
+                {gitInfo && gitInfo.map(item => <React.Fragment>
+                    <Project info={item}/>
+                </React.Fragment>)}
             </StackGrid>
         </Box>
     );
