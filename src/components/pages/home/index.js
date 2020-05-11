@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'grommet';
-import Header from '../../Header';
+import { Header } from '../../header';
 import Welcome from './Welcome';
 import ncBg from '../../../static/images/nc-bg.jpg'
 

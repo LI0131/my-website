@@ -14,14 +14,6 @@ export const GREEN_SCHEME = { still: '#5eb555', hovered: '#6dd463' }
 * Define Styles
 */
 
-export const headerStyle = {
-    zIndex: '10',
-    overflow: 'hidden',
-    position: 'fixed',
-    top: 0,
-    width: '100%'
-};
-
 export const iconStyle = {
     float: 'right',
     marginTop: '15px',

@@ -1,0 +1,12 @@
+.menu {
+    display: none;
+};
+
+@media only screen and (max-width: 684px) {
+    .menu {
+        display: inline;
+        float: right;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+};

@@ -1,0 +1,35 @@
+.header {
+    z-index: '10';
+    overflow: 'hidden';
+    position: 'fixed';
+    top: 0;
+    width: '100%';
+    display: inline;
+};
+
+.header-content {
+    display: inline;
+};
+
+.header-icon-button {
+    margin-top: 5px;
+};
+
+.header-menu {
+    display: none;
+};
+
+@media only screen and (max-width: 684px) {
+    .header {
+        padding-bottom: 15px;
+    };
+
+    .header-content {
+        display: none;
+    };
+
+    .header-menu {
+        display: inline;
+        float: right;
+    };
+};
